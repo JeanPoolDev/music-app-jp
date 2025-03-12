@@ -2,8 +2,8 @@ import { NavLink } from "react-router";
 
 const links = [
   { path: '/', nombre: 'Inicio' },
-  { path: '/music/romance', nombre: 'Romance' },
-  { path: '/music/regueton', nombre: 'Regueton' },
+  { path: '/romance', nombre: 'Romance' },
+  { path: '/regueton', nombre: 'Regueton' },
 ]
 
 export function Navbar() {

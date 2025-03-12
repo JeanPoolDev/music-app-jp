@@ -1,3 +1,4 @@
+import { Play } from "./components/Play";
 import { Sidebar } from "./components/Sidebar";
 import { MusicRouter } from "./router/MusicRouter";
 
@@ -11,9 +12,11 @@ export function MusicApp() {
         <MusicRouter />
       </main>
 
-      <section className="h-[10%] ">
-
+      <section className="h-[10%]">
+        <Play />
       </section>
+
+      <audio src=""></audio>
 
     </div>
   );

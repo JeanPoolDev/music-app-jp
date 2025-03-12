@@ -1,31 +1,5 @@
+import { albumsData } from "../../assets/assets";
 import { MusicItem } from "../components/MusicItem";
-
-const musics = [
-  {
-    id: 1,
-    image: 'https://i.pinimg.com/736x/12/39/bd/1239bd52ed659fbdb6a941bc87d26c53.jpg',
-    title: 'Solo Leveling',
-    desc: 'Amet nisi cupidatat laborum esse consequat laborum.'
-  },
-  {
-    id: 2,
-    image: 'https://i.pinimg.com/736x/b0/3a/9a/b03a9ab25a3e9449a6bc4645f97ba213.jpg',
-    title: 'Dota 2',
-    desc: 'Amet nisi cupidatat laborum esse consequat laborum.'
-  },
-  {
-    id: 3,
-    image: 'https://i.pinimg.com/736x/7a/f8/b6/7af8b6af3550184e8043da064c9e4c0c.jpg',
-    title: 'Wu Kong',
-    desc: 'Amet nisi cupidatat laborum esse consequat laborum.'
-  },
-  {
-    id: 4,
-    image: 'https://i.pinimg.com/736x/be/f6/a6/bef6a69578831baa17d74d58684f2c6d.jpg',
-    title: 'Fornite',
-    desc: 'Amet nisi cupidatat laborum esse consequat laborum.'
-  }
-]
 
 export function HomePage() {
   return (
@@ -59,13 +33,13 @@ export function HomePage() {
       <div className="space-y-4">
         <h1 className="text-xl">Treding now</h1>
 
-        <div className="flex gap-4 flex-col lg:flex-row">
+        <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {
-            musics.map(music => (
-              <MusicItem key={music.id} {...music} />
+            albumsData.map(song => (
+              <MusicItem key={song.id} {...song} />
             ))
           }
-        </div>
+        </section>
 
       </div>
 
