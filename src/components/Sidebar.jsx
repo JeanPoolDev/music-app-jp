@@ -4,7 +4,7 @@ export function Sidebar() {
 
       <div className="flex justify-between items-center mb-4">
         <div>
-          <h1 className="text-2xl">
+          <h1 className="text-2xl font-bold">
             Music JP
           </h1>
           <p>Musicas y Postcast</p>
