@@ -19,10 +19,11 @@ body {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0);
+  background: rgba(255, 255, 255, 0.01);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
+
 
 .fondo {
   background: linear-gradient(to right, rgb(108, 108, 239), rgb(121, 224, 121));
