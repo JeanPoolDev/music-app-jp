@@ -6,8 +6,11 @@ body {
   color: white;
   background-image: url('/home.png');
   background-repeat: no-repeat;
+  aspect-ratio: 3/2;
   background-size: cover;
   background-position: center;
+  height: 100vh;
+  width: 100%;
 }
 
 .degradado {
