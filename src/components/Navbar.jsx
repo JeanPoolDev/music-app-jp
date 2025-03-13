@@ -1,4 +1,5 @@
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
+import { assets } from "../../assets/assets";
 
 const links = [
   { path: '/', nombre: 'Inicio' },
@@ -7,6 +8,8 @@ const links = [
 ]
 
 export function Navbar() {
+
+  const navigate = useNavigate();
 
   return (
     <header className="flex justify-between items-center h-[80px]">
@@ -27,10 +30,10 @@ export function Navbar() {
       </nav>
 
       <div className="hidden lg:flex gap-4">
-        <div className="w-8 h-8 rounded-full bg-gray-200"></div>
-        <div className="w-8 h-8 rounded-full bg-gray-200"></div>
-        <div className="w-8 h-8 rounded-full bg-gray-200"></div>
+        <img onClick={() => navigate(-1)} src={assets.arrow_left} className="w-9 p-2 hover:bg-[#ffffff2b] rounded-full cursor-pointer" />
+        <img onClick={() => navigate(1)} src={assets.arrow_right} className="w-9 p-2 hover:bg-[#ffffff2b] rounded-full cursor-pointer" />
       </div>
+
     </header>
   );
 };

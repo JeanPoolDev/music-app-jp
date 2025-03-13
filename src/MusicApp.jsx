@@ -1,9 +1,13 @@
 import { Play } from "./components/Play";
 import { Sidebar } from "./components/Sidebar";
+import { useSpotify } from "./hook/useSpotify";
 import { MusicRouter } from "./router/MusicRouter";
 
 
 export function MusicApp() {
+
+  const { audioRef, track } = useSpotify();
+
   return (
     <div className="h-screen glass">
 
@@ -16,7 +20,9 @@ export function MusicApp() {
         <Play />
       </section>
 
-      <audio src=""></audio>
+      <audio ref={audioRef} src={track.file} preload="auto"></audio>
+
+
 
     </div>
   );

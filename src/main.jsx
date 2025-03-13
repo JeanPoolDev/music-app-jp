@@ -4,11 +4,14 @@ import { MusicApp } from './MusicApp.jsx'
 
 import './index.css'
 import { BrowserRouter } from 'react-router'
+import { ProviderSpotify } from './context/SpotifyContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
-      <MusicApp />
+      <ProviderSpotify>
+        <MusicApp />
+      </ProviderSpotify>
     </BrowserRouter>
   </StrictMode>,
 )
